@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    background-color: blueviolet;
+    color: rgb(255, 255, 255);
+    padding-top: 3ch;
+}
