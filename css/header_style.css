@@ -15,6 +15,8 @@ body{
     color: var(--font-color);
 }
 
+
+
 #nav-bar
 {
     position: sticky;
@@ -58,6 +60,15 @@ body{
     padding-left: 20;
 }
 
-.footer{
-    background-color: var(--primary-color);
+#footer{
+    background-color: rgb(194, 194, 194); /* temporary color for highlighting */
 }
+
+#header{
+    background-color: rgb(194, 194, 194); /* temporary color for highlighting */
+}
+
+
+
+a { color: inherit; } /* removing the awful blue color of the links */
+a:hover { color: inherit; } /* remove the awful blue color on hovernig */
