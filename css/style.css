@@ -1,0 +1,63 @@
+:root{
+    /* --mimi-pink: #ffe1f0ff;
+    --sky-blue-crayola: #52d6edff;
+    --white: #ffffffff;
+    --sonic-silver: #767676ff;
+    --davys-grey: #484848ff; */
+    --primary-color: #52d6edff;
+    --secondary-color: #ffe1f0ff;
+    --font-color: #484848ff;
+    --secondary-font-color: #767676ff;
+    --bg-color: #ffffffff;
+}
+
+body{
+    color: var(--font-color);
+}
+
+#nav-bar
+{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar
+{
+    padding: 0;
+}
+
+.navbar-nav li{
+    padding: 0 10px;
+}
+
+.navbar-nav li a{
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.fa-bars{
+    color: var(--font-color);
+    font-size: 30px;
+}
+
+.navbar-toggler{
+    outline: none;
+}
+
+.dropdown-menu{
+    background-color: var(--primary-color);
+}
+
+.dropdown-item li a{
+    color: var(--font-color);
+}
+
+.navbar-brand img{
+    height: 40;
+    padding-left: 20;
+}
+
+.footer{
+    background-color: var(--primary-color);
+}
