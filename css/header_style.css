@@ -64,10 +64,11 @@ body{
     background-color: rgb(194, 194, 194); /* temporary color for highlighting */
 }
 
-#header{
+.header{
     background-color: rgb(194, 194, 194); /* temporary color for highlighting */
+    /* position: sticky;
+    top: 0; */
 }
-
 
 
 a { color: inherit; } /* removing the awful blue color of the links */
