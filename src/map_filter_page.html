@@ -16,16 +16,17 @@
     <!-- import header bar -->
     <div include-html="includes/header.html"></div>
 
-    <!-- WRITE YOUR PAGE HERE -->
-    <div class="container">
+    <!-- Main Page Con -->
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
           
+          <!-- upper header, filter buttons and more -->
           <div class="container upper_header_filters_buttons">
             <!-- TODO: add the real number of options, for the real dates -->
               <p>300+ washers $ Apr 29 - May 19 (3 days)</p>
               <h1>Washers in selected map area</h1>
-              <div class="container" id="upper_filter_buttons_area">
+              <div class="container-fluid" id="upper_filter_buttons_area">
                 <!-- TODO: make the buttons do something -->
                 <button type="button" class="upper_filter_buttons">Self service</button>
                 <button type="button" class="upper_filter_buttons">White laundry only</button>
@@ -36,9 +37,44 @@
               <p>Review COVID-19 travel restrictions before you book. <a href="">Learn more</a></p>
           </div>
 
+          <!-- Washers !!! -->
+          <div class="container-fluid washer_block">
+            <div class="row">
+              <div class="col-md-6">
+                  <img class="washer_img" src="../images/washer3.png" alt="Mister Washer" aria-hidden="true">
+              </div>
+
+              <div class="col-md-6">
+                <div class="washer_text">
+                  <p>White and Colored in Jerusalem</p>
+                  <h2>Mister Washer Machine</h2>
+                  <p>we need some place details or short intro, one to two rows top. no more than that?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Washers !!! -->
+          <div class="container-fluid washer_block">
+            <div class="row">
+              <div class="col-md-6">
+                  <img class="washer_img" src="../images/washer2.png" alt="Mister Washer" aria-hidden="true">
+              </div>
+
+              <div class="col-md-6">
+                <div class="washer_text">
+                  <p>White and Colored in Jerusalem</p>
+                  <h2>Mister Washer Machine</h2>
+                  <p>we need some place details or short intro, one to two rows top. no more than that?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="col-lg-6 filer_map_column">
-          We will put a map here
+          <!-- TODO: replace with real map -->
+         <p style="text-align: center; margin: 100px 0">We will put a map here</p>
         </div>
       </div>
     </div>

@@ -1,13 +1,14 @@
 .filer_map_column {
-    background-color: rgba(160, 160, 240, 0.952);
+    background-color: rgba(230, 230, 230, 0.623);
 }
 
 .upper_header_filters_buttons {
-    text-align: left;
+    padding: 2% 0;
+    margin: 2% 0;
 }
 
-#upper_filter_buttons_area {
-
+.upper_filter_buttons_area {
+    /* need to be aligned to the left */
 }
 
 .upper_filter_buttons {
@@ -21,4 +22,37 @@
 
 .upper_filter_buttons:hover { 
     border-color: rgb(110, 110, 110);
+}
+
+.washer_block {
+    border-top: 1px solid;
+    border-color: rgb(233, 233, 233);
+    padding: 2% 0;
+    margin: 2% 0;
+
+    color:  rgb(100, 100, 100);
+}
+
+.washer_img {
+    /* height: 100%; */
+    /* width: 50%; */
+    height: 200px;
+    width: 200px;
+    /* position: static; */
+    /* object-fit: cover; */
+    /* vertical-align: bottom; */
+    display: inline-block;
+
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgb(182, 182, 182, 0.61) 
+}
+
+.washer_text {
+    text-align: left;   
+}
+
+.open_hours {
+    border: 1px solid;
+    border-color: rgb(233, 233, 233);
 }
