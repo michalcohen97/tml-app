@@ -14,7 +14,7 @@ const MAX_NUMBER_OF_BLOCKS = 5; // max number of blocks in the page
     TODO: add Documentation
 */
 function insert_washer_blocks(washer_tag) {
-    const washer_list_by_filter = [washer1, washer2]; // list of wahsers, after filters (?)
+    const washer_list_by_filter = [washer1, washer2, washer1, washer2]; // list of wahsers, after filters (?)
 
     let whole_washers_html_block = '';
     const max_number_of_blocks = Math.min(MAX_NUMBER_OF_BLOCKS, washer_list_by_filter.length);
