@@ -11,6 +11,7 @@
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <script src="../js/tml.js"></script>
+        <script src="../js/map_filter_page.js"></script>
     </head>
     <body>
     <!-- import header bar -->
@@ -37,22 +38,10 @@
               <p>Review COVID-19 travel restrictions before you book. <a href="">Learn more</a></p>
           </div>
 
-          <!-- Washers !!! -->
-          <div class="container-fluid washer_block">
-            <div class="row">
-              <div class="col-md-6">
-                  <img class="washer_img" src="../images/washer3.png" alt="Mister Washer" aria-hidden="true">
-              </div>
-
-              <div class="col-md-6">
-                <div class="washer_text">
-                  <p>White and Colored in Jerusalem</p>
-                  <h2>Mister Washer Machine</h2>
-                  <p>we need some place details or short intro, one to two rows top. no more than that?</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- Washers by current filter -->
+          <!-- FIXME: Washer JS research -->
+          <div id="washers_list_of_blocks"></div>
+          <script>insert_washer_blocks("washers_list_of_blocks")</script>
 
         </div>
         <div class="col-lg-6 filer_map_column">
