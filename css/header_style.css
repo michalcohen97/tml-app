@@ -70,6 +70,12 @@ body{
     top: 0; */
 }
 
+/* this class make elements stick to the top of the page on scroll */
+.sticky_to_top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
 
 a { color: inherit; } /* removing the awful blue color of the links */
 a:hover { color: inherit; } /* remove the awful blue color on hovernig */
