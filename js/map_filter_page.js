@@ -12,6 +12,8 @@ const MAX_NUMBER_OF_BLOCKS = 5; // max number of blocks in the page
 
 /*
     TODO: add Documentation
+
+    @param {HTMLElement} washer_tag - the html isertion tag
 */
 function insert_washer_blocks(washer_tag) {
     const washer_list_by_filter = [washer1, washer2, washer1, washer2]; // list of wahsers, after filters (?)
@@ -29,6 +31,9 @@ function insert_washer_blocks(washer_tag) {
 /*
     takes wahser object and returns string of html tags and content.
     the content represents one wahser block.
+
+    @param {Washer} washer - washer js
+    @return {void}
 */
 function create_one_washer_block(washer) {
     let washer_block_raw_html = '';
@@ -49,4 +54,21 @@ function create_one_washer_block(washer) {
     washer_block_raw_html += '<p>'+ washer.description +'</p>';
     washer_block_raw_html += '</div></div></div></div>';
     return washer_block_raw_html;
+}
+
+/*
+
+*/
+function initMap(current_location) {
+    // The map, centered at current location
+    const map = new google.maps.Map(document.getElementById("map"),
+    {
+        zoom: 4,
+        center: current_location,
+    });
+    // The marker, positioned at current location
+    // const marker = new google.maps.Marker({
+    //     position = current_location,
+    //     map: map,
+    // });
 }

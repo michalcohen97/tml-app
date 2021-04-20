@@ -15,7 +15,7 @@
     </head>
     <body>
     <!-- import header bar -->
-    <div include-html="includes/header.html"></div>
+    <div include-html="includes/header.html" class="sticky_to_top"></div>
 
     <!-- Main Page Con -->
     <div class="container-fluid">
@@ -45,9 +45,14 @@
 
         </div>
         <div class="col-lg-6 filer_map_column">
-          <!-- TODO: replace with real map -->
-         <p style="text-align: center; margin: 100px 0">We will put a map here</p>
+        <div class="sticky_to_top">
+          <div id="map"></div>
         </div>
+      </div>
+      <!-- class wakka key: AIzaSyBP2kPsOHfmf-XJMKhf-lBWeQdl5SqSRR8 -->
+        <script
+         src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async>
+        </script>
       </div>
     </div>
 

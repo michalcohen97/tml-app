@@ -56,3 +56,14 @@
     border: 1px solid;
     border-color: rgb(233, 233, 233);
 }
+
+.filer_map_column {
+    position: relative;
+}
+
+#map { 
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-color: rgb(43, 185, 185);
+  }
