@@ -6,6 +6,7 @@ washer1 = {name: "Mister Washer", white: true, img_src: "../images/washer3.png",
 washer2 = {name: "Watching Machine", white: false, img_src: "../images/washer2.png", location: "Haifa",
             description: "just another weird description..."};
 
+cr_lo = {lat: 31.773610027001155, lng: 35.215351837826255} // burger room
 ////////////////////////////////////////////////////
 
 const MAX_NUMBER_OF_BLOCKS = 5; // max number of blocks in the page
@@ -63,8 +64,9 @@ function initMap(current_location) {
     // The map, centered at current location
     const map = new google.maps.Map(document.getElementById("map"),
     {
-        zoom: 4,
-        center: current_location,
+        zoom: 15,
+        // center: current_location,
+        center: cr_lo,
     });
     // The marker, positioned at current location
     // const marker = new google.maps.Marker({
