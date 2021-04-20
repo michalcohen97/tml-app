@@ -11,10 +11,11 @@
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <script src="../js/tml.js"></script>
+        <script src="../js/map_filter_page.js"></script>
     </head>
     <body>
     <!-- import header bar -->
-    <div include-html="includes/header.html"></div>
+    <div include-html="includes/header.html" class="sticky_to_top"></div>
 
     <!-- Main Page Con -->
     <div class="container-fluid">
@@ -24,9 +25,9 @@
           <!-- upper header, filter buttons and more -->
           <div class="container upper_header_filters_buttons">
             <!-- TODO: add the real number of options, for the real dates -->
-              <p>300+ washers $ Apr 29 - May 19 (3 days)</p>
+              <div>300+ washers $ Apr 29 - May 19 (3 days)</div>
               <h1>Washers in selected map area</h1>
-              <div class="container-fluid" id="upper_filter_buttons_area">
+              <div id="upper_filter_buttons_area">
                 <!-- TODO: make the buttons do something -->
                 <button type="button" class="upper_filter_buttons">Self service</button>
                 <button type="button" class="upper_filter_buttons">White laundry only</button>
@@ -37,45 +38,21 @@
               <p>Review COVID-19 travel restrictions before you book. <a href="">Learn more</a></p>
           </div>
 
-          <!-- Washers !!! -->
-          <div class="container-fluid washer_block">
-            <div class="row">
-              <div class="col-md-6">
-                  <img class="washer_img" src="../images/washer3.png" alt="Mister Washer" aria-hidden="true">
-              </div>
-
-              <div class="col-md-6">
-                <div class="washer_text">
-                  <p>White and Colored in Jerusalem</p>
-                  <h2>Mister Washer Machine</h2>
-                  <p>we need some place details or short intro, one to two rows top. no more than that?</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Washers !!! -->
-          <div class="container-fluid washer_block">
-            <div class="row">
-              <div class="col-md-6">
-                  <img class="washer_img" src="../images/washer2.png" alt="Mister Washer" aria-hidden="true">
-              </div>
-
-              <div class="col-md-6">
-                <div class="washer_text">
-                  <p>White and Colored in Jerusalem</p>
-                  <h2>Mister Washer Machine</h2>
-                  <p>we need some place details or short intro, one to two rows top. no more than that?</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- Washers by current filter -->
+          <!-- FIXME: Washer JS research -->
+          <div id="washers_list_of_blocks"></div>
+          <script>insert_washer_blocks("washers_list_of_blocks")</script>
 
         </div>
         <div class="col-lg-6 filer_map_column">
-          <!-- TODO: replace with real map -->
-         <p style="text-align: center; margin: 100px 0">We will put a map here</p>
+        <div class="sticky_to_top">
+          <div id="map"></div>
         </div>
+      </div>
+      <!-- class wakka key: AIzaSyBP2kPsOHfmf-XJMKhf-lBWeQdl5SqSRR8 -->
+        <script
+         src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async>
+        </script>
       </div>
     </div>
 
