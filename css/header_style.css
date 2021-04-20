@@ -77,5 +77,11 @@ body{
     top: 0px;
 }
 
+.sticky_to_bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0px;
+}
+
 a { color: inherit; } /* removing the awful blue color of the links */
 a:hover { color: inherit; } /* remove the awful blue color on hovernig */
