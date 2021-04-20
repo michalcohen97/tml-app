@@ -77,10 +77,8 @@ body{
     top: 0px;
 }
 
-.sticky_to_bottom {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0px;
+.stay_in_bottom {
+    position: relative;
 }
 
 a { color: inherit; } /* removing the awful blue color of the links */
