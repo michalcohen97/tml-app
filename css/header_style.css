@@ -1,9 +1,4 @@
 :root{
-    /* --mimi-pink: #ffe1f0ff;
-    --sky-blue-crayola: #52d6edff;
-    --white: #ffffffff;
-    --sonic-silver: #767676ff;
-    --davys-grey: #484848ff; */
     --primary-color: #52d6edff;
     --secondary-color: #ffe1f0ff;
     --font-color: #484848ff;
@@ -77,10 +72,8 @@ body{
     top: 0px;
 }
 
-.sticky_to_bottom {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0px;
+.stay_in_bottom {
+    position: relative;
 }
 
 a { color: inherit; } /* removing the awful blue color of the links */

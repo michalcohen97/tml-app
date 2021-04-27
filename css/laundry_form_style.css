@@ -1,0 +1,134 @@
+.confirm-side {
+    position: relative;
+    border-right:1px solid lightgrey ;
+    width: 50%;
+    float: left;
+    height: 100%;
+    z-index: 1010101010;
+    background-color: #fff
+
+}
+
+
+.details-side{
+    position: relative;
+    width: 40%;
+    float: right;
+    height: 100%;
+    z-index: 1010101010;
+    background-color: #fff;
+
+}
+
+
+
+.time_buttons {
+    background-color: white;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-family: century gothic;
+    margin: 6px 4px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid rgba(182, 182, 182, 0.61);
+    border-color: rgba(182, 182, 182, 0.61);
+
+
+}
+
+
+.time_buttons:hover { 
+    border-color: rgb(110, 110, 110);   
+}
+input:checked+label>time_buttons {
+    background: rgba(0, 216, 201, 1);
+  }
+  
+  input{
+    display: none
+  }
+  input:checked+label>.time_buttons {
+    background-color:rgba(0, 216, 201, 1) ;
+  }
+
+
+.load_buttons {
+    background-color: rgba(252, 252, 252, 0.61);
+    border-color: rgba(182, 182, 182, 0.61);
+    border-width: 1.5px;
+    padding: 1% 1% 1% 1%;
+    margin: 2% 0.5%;
+    border-radius: 25px;
+
+}
+
+.load_buttons:hover { 
+    border-color: rgb(110, 110, 110);
+
+}
+
+.wash_buttons {
+    background-color: rgba(252, 252, 252, 0.61);
+    border-color: rgba(182, 182, 182, 0.61);
+    border-width: 1.5px;
+    padding: 1% 1% 1% 1%;
+    margin: 2% 0.5%;
+    border-radius: 25px;
+}
+
+.wash_buttons:hover { 
+    border-color: rgb(110, 110, 110);
+
+}
+
+.washer_img {
+    /* height: 100%; */
+    /* width: 50%; */
+    height: 150px;
+    width: 150px;
+    /* position: static; */
+    /* object-fit: cover; */
+    /* vertical-align: bottom; */
+    display: inline-block;
+
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgb(182, 182, 182, 0.61) 
+}
+
+.confirm_order_button {
+    background-color: rgba(255, 200, 0, 1);
+    border-color: rgba(182, 182, 182, 0.61);
+    border-width: 2px;
+    padding: 3% 3% 3% 3%;
+    margin: 2% 0.5%;
+    border-radius: 25px;
+
+}
+
+
+
+.confirm_order_button:hover { 
+    border-color: rgb(110, 110, 110);
+
+}
+
+.stay_in_bottom {
+    position:absolute;
+    bottom:0;
+    /* width:100%; */
+    /* height:60px; */
+}
+
+
+
+.choices{
+
+
+    background-color: rgba(252, 252, 252, 0.61);
+    border-color: rgba(182, 182, 182, 0.61);
+    border-width: 1.5px;
+    padding: 1% 1% 1% 1%;
+    margin: 2% 0.5%;
+    border-radius: 25px;
+  }

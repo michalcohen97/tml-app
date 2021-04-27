@@ -29,11 +29,12 @@
               <h1>Washers in selected map area</h1>
               <div id="upper_filter_buttons_area">
                 <!-- TODO: make the buttons do something -->
-                <button type="button" class="upper_filter_buttons">Self service</button>
+                <button type="button" class="upper_filter_buttons" OnClick="filter_washers_by_self_service()">Self service</button>
                 <button type="button" class="upper_filter_buttons">White laundry only</button>
                 <button type="button" class="upper_filter_buttons">Near me</button>
                 <button type="button" class="upper_filter_buttons">More filters</button>
               </div>
+              <p><a href="" onclick="refresh_filters();">See All</a>>>></p>
               <!-- TODO: add href to current covid restrictions -->
               <p>Review COVID-19 travel restrictions before you book. <a href="">Learn more</a></p>
           </div>
@@ -41,7 +42,7 @@
           <!-- Washers by current filter -->
           <!-- FIXME: Washer JS research -->
           <div id="washers_list_of_blocks"></div>
-          <script>insert_washer_blocks("washers_list_of_blocks")</script>
+          <script>insert_washer_blocks()</script>
 
         </div>
         <div class="col-lg-6 filer_map_column">
@@ -57,7 +58,7 @@
     </div>
 
     <!-- import footer bar -->
-    <div include-html="includes/footer.html" class="sticky_to_bottom"></div>
+    <div include-html="includes/footer.html" class="stay_in_bottom"></div>
     <script>
       includeHTML();
     </script>
