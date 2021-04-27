@@ -64,11 +64,22 @@ body{
     background-color: rgb(194, 194, 194); /* temporary color for highlighting */
 }
 
-#header{
+.header{
     background-color: rgb(194, 194, 194); /* temporary color for highlighting */
+    /* position: sticky;
+    top: 0; */
 }
 
+/* this class make elements stick to the top of the page on scroll */
+.sticky_to_top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
 
+.stay_in_bottom {
+    position: relative;
+}
 
 a { color: inherit; } /* removing the awful blue color of the links */
 a:hover { color: inherit; } /* remove the awful blue color on hovernig */
