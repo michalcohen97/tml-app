@@ -1,0 +1,61 @@
+
+
+.checked {
+    color: #52d6edff;
+  }
+
+.filer_map_column {
+    background-color: rgba(230, 230, 230, 0.623);
+}
+
+.upper_detailes {
+    padding: 2% 0;
+    margin: 2% 0;
+}
+
+.washer_details_header {
+    /* need to be aligned to the left */
+    padding: 0;
+}
+
+.washer_properties {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgb(233, 233, 233);
+    /* padding: 2% 0; */
+    /* margin: 2% 0; */
+
+    color:  rgb(100, 100, 100);
+}
+
+.washer_img {
+    /* TODO: manage images..... */
+    /* height: 100%; */
+    /* width: 50%; */
+    height: 200px;
+    width: 200px;
+    /* position: static; */
+    /* object-fit: cover; */
+    /* vertical-align: bottom; */
+    display: inline-block;
+
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgb(182, 182, 182, 0.61);
+}
+
+.washer_text {
+    text-align: left;   
+}
+
+.open_hours {
+    border: 1px solid;
+    border-color: rgb(233, 233, 233);
+}
+
+#map { 
+    position: fixed !important;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(43, 185, 185);
+  }
