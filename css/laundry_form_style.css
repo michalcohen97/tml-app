@@ -113,7 +113,7 @@ input:checked+label>time_buttons {
 
 }
 
-.stay_in_bottom {
+.stay_in_bottom_pls {
     position:absolute;
     bottom:0;
     /* width:100%; */
