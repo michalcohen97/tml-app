@@ -1,0 +1,80 @@
+.discription {
+    font: Montserrat;
+    background-color: rgba(252, 252, 252, 0.61);
+    margin-left: 3%;
+    font-size: larger;
+}
+
+.rating {
+    font: Montserrat;
+    margin-left: 3%;
+    font-size:x-large;}
+
+
+.washer_img_square {
+    /* TODO: manage images..... */
+    /* height: 100%; */
+    /* width: 50%; */
+    height: 250px;
+    width: 250px;
+    /* position: static; */
+    /* object-fit: cover; */
+    /* vertical-align: bottom; */
+    display: inline-block;
+
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgb(182, 182, 182, 0.61);
+}
+
+.washer_img_wide {
+    /* height: 100%; */
+    /* width: 50%; */
+    height: 281.5px;
+    width: 500px;
+    /* position: static; */
+    /* object-fit: cover; */
+    /* vertical-align: bottom; */
+    display: inline-block;
+
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: rgb(182, 182, 182, 0.61) 
+}
+.Editting_button {
+    font-size: small;
+}
+
+.images_history_reviews {
+    float: left;
+    margin-left:5% ;
+}
+
+
+.sticky_to_bottom {
+    position: -webkit-sticky;
+    position: fixed;
+    bottom: 0px;
+}
+h2 { color: #F90B6D; font-family: 'Open Sans', sans-serif; font-size: 24px; font-weight: 300; line-height: 32px; margin: 0 0 14px; }
+    ;
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+.working_hours{
+    float: right;
+    margin-right: 15%;
+}
+
+.confirm_order_button {
+    background-color: rgba(255, 200, 0, 1);
+    border-color: rgba(182, 182, 182, 0.61);
+    border-width: 2px;
+    padding: 3% 3% 3% 3%;
+    margin: 2% 0.5%;
+    border-radius: 25px;
+
+}
