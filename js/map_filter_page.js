@@ -11,7 +11,8 @@ current_location = {lat: 31.773610027001155, lng: 35.215351837826255} // burger 
 const MAX_NUMBER_OF_BLOCKS = 5; // max number of blocks in the page
 
 /*
-    TODO: add Documentation
+    currently - use all of the washers (query from server?) and take a filter function, than create each of the washers in block and display them.
+    FIXME: hard to order-by by location\rating, maybe will take a lot of time to load but DB
 */
 function insert_washer_blocks(filter = () => true) {    
     let whole_washers_html_block = '';
@@ -23,7 +24,17 @@ function insert_washer_blocks(filter = () => true) {
             whole_washers_html_block += washer_block_raw_html;
         }
     }
+
     document.getElementById("washers_list_of_blocks").innerHTML = whole_washers_html_block;
+    
+    // const xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange = () => {
+    //     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+    //         document.getElementById("washers_list_of_blocks").innerHTML = whole_washers_html_block;
+    //     }
+    // }
+    // xmlhttp.open("GET", "???", true);
+    // xmlhttp.send();
 }
 
 /*
@@ -77,28 +88,30 @@ function create_one_washer_block(washer) {
 }
 
 /*
-    TODO: add Documentation
+    initialzie google maps object and sets markers in the washers location.
 */
 function initMap(filter = () => true) {
     // The map, centered at current location
     const map = new google.maps.Map(document.getElementById("map"),
     {
         zoom: 15,
-        // center: current_location,
         center: current_location,
     });
     // adding markers for the washers (after filter)
-    let markersDict = [];
     for (i in washer_list_by_filter) {
         if (filter(washer_list_by_filter[i])) {
-        markersDict[i] = new google.maps.Marker({
-            position: { lat: washer_list_by_filter[i].lat, lng: washer_list_by_filter[i].lng },
-            animation: google.maps.Animation.DROP,
-            map: map,
-        })};
-    }
-
-    google.maps.event.addListener(markersDict[i], 'click', function()    { 
-        window.open("blog/page01.html","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=yes")
-        });
+            const marker = new google.maps.Marker({
+                position: { lat: washer_list_by_filter[i].lat, lng: washer_list_by_filter[i].lng },
+                animation: google.maps.Animation.DROP,
+                map: map,
+                washer: washer_list_by_filter[i],
+        })
+        marker.addListener("click", () => {
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+              } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+              }
+        })
+    }}
 }
