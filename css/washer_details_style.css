@@ -82,6 +82,13 @@
     margin-right:auto;
   }
 
+.time_buttons {
+    color: var(--primary-color);
+}
+
+.time_buttons:hover {
+    color: red;
+}
 
 .washer_top_review_block {
     /* background-color: rgb(255, 255, 255); */
