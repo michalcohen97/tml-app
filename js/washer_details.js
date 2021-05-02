@@ -4,9 +4,10 @@
 
 ////////////////// FIXME: test stuff ///////////////
 washer1 = {name: "Amitay Rachman", rating: 3, vertified: true, top_review: "”Better than my mom - Fold the laundry perfectly” (nadav, last week)",
-profile_pic: "../images/amitay pic.jpg", img_src: "../images/washer3.png", pics: ["../images/washer3.png", "../images/washer3.png", "../images/washer3.png", "../images/washer3.png","../images/washer3.png"],
+profile_pic: "../images/amitay pic.jpg", img_src: "../images/washer1.png", pics: ["../images/washer2.png", "../images/miele.png", "../images/softener.jpg", "../images/folding.jpg","../images/washer3.png"],
 location_str: "Reahvia, Jerusalem", location_cor: [31.773610027001155,35.215351837826255],
-machine_type : "bosch 9KG", description: "Hello! I’m Amitay, student at HUJI, worked from home so I’m available most of the time. New washing machine and dryer! and discount for soldiers!", 
+num_of_reviews: "12",
+machine_type : "bosch 9KG", description: "Hello! I’m Amitay, student at HUJI! worked from home so I’m available most of the time. New washing machine and dryer! and discount for soldiers!", 
 commit: "48 hours", opening_times: {Sunday: [11,16], Monday: [09, 18],Tuesday: [10, 18],Wednesday: [9, 18],Thursday: [10, 20],Friday: [09, 20],Saturday: [10, 18]}, 
 clients_who_review: ['client3', 'client5'] , properties : {white: true, door_2_door : true, ironing : true, access : true}
 };
@@ -30,7 +31,7 @@ const MAX_NUMBER_OF_PICS = 6; // max number of pics in the page
 ////////////////////////////////////////////////////
 
 function get_washer_name(tag, washer) {
-    washer_name = "<h1>"+ washer.name + "</h1>";
+    washer_name = "<h2>"+ washer.name + "</h2>";
     document.getElementById(tag).innerHTML = washer_name;
 }
 
@@ -41,13 +42,9 @@ function get_washer_adress(tag, washer) {
 }
 
 function get_washer_rating(tag, washer) {
-    let rating_str = '';
-    for (let i = 0; i < washer.rating; i++) {
-        rating_str += '<span class="fa fa-star checked_stars"></span>';
-    }
-    for (let i = washer.rating; i < 5; i++) {
-        rating_str += '<span class="fa fa-star un_checked_stars"></span>';
-    }
+    rating_str = '<span class="fa fa-star checked_stars">';
+    rating_str += "   " + washer.rating + " (" + washer.num_of_reviews + " reviews )" ;
+    rating_str += '</span>';
     document.getElementById(tag).innerHTML = rating_str;
 }
 
@@ -114,7 +111,7 @@ function insert_washer_properties(washer_tag, washer) {
         properties_section += '<i class="fa fa-diamond"></i>';
         properties_section += '</div>';
         properties_section += '<div class="col-md-5">';
-        properties_section += '<p>' + washer.name + ' do white!</p>';
+        properties_section += '<p>' + washer.name + ' make whites!</p>';
         properties_section += '</div>';
         properties_section += '</section>';
     }
@@ -215,7 +212,7 @@ function checkOpeningTimes(tag,washer) {
                 document.getElementById("openClosed").style.color = "green";            
             }
             else {
-                document.getElementById(tag).innerHTML = '<p id="openClosed">closed</p>';
+                document.getElementById(tag).innerHTML = '<p id="openClosed">closed now</p>';
                 document.getElementById("openClosed").style.color = "red";      
             }
             break; 
@@ -225,7 +222,7 @@ function checkOpeningTimes(tag,washer) {
                 document.getElementById("openClosed").style.color = "green";            
             }
             else {
-                document.getElementById(tag).innerHTML = '<p id="openClosed">closed</p>';
+                document.getElementById(tag).innerHTML = '<p id="openClosed">closed now</p>';
                 document.getElementById("openClosed").style.color = "red";      
             }
             break; 
@@ -296,7 +293,7 @@ function color_today() {
 
 function get_washer_commitment(tag, washer) {
     washer_desc = "<h5 class='commit_text'>" + washer.name + " commits the lundry will be ready in: " + washer.commit + "!</h5>";
-    washer_desc += '<button id="avButton" type="button" class="btn btn-success">check avabillity</button>';
+    washer_desc += '<button id="avButton" type="button" class="btn btn-success">order from ' + washer.name  + '</button>';
     document.getElementById(tag).innerHTML = washer_desc;
     document.getElementById("avButton").onclick = function () {
         location.href = "../src/laundry_form_page.html";

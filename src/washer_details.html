@@ -32,7 +32,7 @@
 
 <body>
   <!-- import header bar -->
-  <div include-html="../src/includes/header.html" class="sticky_to_top"></div>
+  <div include-html="includes/header.html" class="sticky_to_top"></div>
 
   <!-- Main Page Con -->
   <div class="container-fluid">
@@ -50,9 +50,8 @@
               </div>
               <div class="col-md-3">
                 <div class="w3-padding w3-text-red">
-                  <div class="add_to_fav">
-                   <i class="fa fa-heart"></i> add to favorites
-                  </div>
+                   <button type="button" class="time_buttons">
+                     <i class="fa fa-heart"></i> add to favorites</button>
                 </div>
               </div>
             </div>
@@ -63,7 +62,7 @@
                   <script>get_washer_adress("washer_adress", washer1)</script>
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <div id="washer_rating" class="washer_rating"></div>
                 <script>get_washer_rating("washer_rating", washer1)</script>
             </div>
@@ -83,7 +82,7 @@
         </div>
 
 
-        <div class="container description_block">
+        <div class="container-fluid description_block">
           <div class="row">
             <div class="col-md-1">
                 <div id="washer_proflie_img"></div>
@@ -197,13 +196,9 @@
           </div>
 
           <div class="row">
-            <div id="map">
-              <script 
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP2kPsOHfmf-XJMKhf-lBWeQdl5SqSRR8&callback=initMap&libraries=&v=weekly"async>
-                setPlace(washer1)              
-              </script>
-            </div>
-          </div>
+            <!-- <div id="map"> -->
+              <img class="map_pic" src= ../images/azza_map.png> 
+              <!-- </div> -->
 
 
           <div class="row">
