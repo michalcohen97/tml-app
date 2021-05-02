@@ -60,41 +60,79 @@
       <label for="21:00-22:00">
       <div class="time_buttons">21:00-22:00</div>
       </label>
-      <hr>
+
+      <hr style="width:90%;text-align:left;margin-left:0">
       <h6>How Many Loads</h6>
-      <button type="button" class="load_buttons">1</button>
+      <!-- <button type="button" class="load_buttons">1</button>
       <button type="button" class="load_buttons">2</button>
       <button type="button" class="load_buttons">3</button>
-      <button type="button" class="load_buttons">4</button>
-      <hr>
+      <button type="button" class="load_buttons">4</button> -->
+      <input type="checkbox" id="1" value="1" name="load" />
+      <label for="1">
+      <div class="load_buttons">1</div>
+      </label>
+      <input type="checkbox" id="2" value="2" name="load" />
+      <label for="2">
+      <div class="load_buttons">2</div>
+      </label>
+      <input type="checkbox" id="3" value="3" name="load" />
+      <label for="3">
+      <div class="load_buttons">3</div>
+      </label>
+      <input type="checkbox" id="4" value="4" name="load" />
+      <label for="4">
+      <div class="load_buttons">4</div>
+      </label>
+
+      <hr style="width:90%;text-align:left;margin-left:0">
       <h6>Wash Settings</h6>
-      <button type="button" class="wash_buttons">Defualt</button>
+      <!-- <button type="button" class="wash_buttons">Defualt</button>
       <button type="button" class="wash_buttons">30°C Wash</button>
       <button type="button" class="wash_buttons">40°C Wash</button>
       <button type="button" class="wash_buttons">50°C Wash</button>
       <button type="button" class="wash_buttons">60°C Wash</button>
-      <button type="button" class="wash_buttons">Whites Only</button>
+      <button type="button" class="wash_buttons">Whites Only</button> -->
+      <input type="checkbox" id="Defualt" value="Defualt" name="settings" />
+      <label for="Defualt">
+      <div class="wash_buttons">Defualt</div>
+      </label>
+      <input type="checkbox" id="30°C Wash" value="30°C Wash" name="settings" />
+      <label for="30°C Wash">
+      <div class="wash_buttons">30°C Wash</div>
+      </label>
+      <input type="checkbox" id="40°C Wash" value="40°C Wash" name="settings" />
+      <label for="40°C Wash">
+      <div class="wash_buttons">40°C Wash</div>
+      </label>
+      <input type="checkbox" id="50°C Wash" value="50°C Wash" name="settings" />
+      <label for="50°C Wash">
+      <div class="wash_buttons">50°C Wash</div>
+      </label>
+      <input type="checkbox" id="60°C Wash" value="60°C Wash" name="settings" />
+      <label for="60°C Wash">
+      <div class="wash_buttons">60°C Wash</div>
+      </label>
+      <input type="checkbox" id="Whites Only" value="Whites Only" name="settings" />
+      <label for="Whites Only">
+      <div class="wash_buttons">Whites Only</div>
+      </label>
+      
     </div>
     <div class="details-side">
         <h2>Order Details</h2>
         <h6>Mister Washer Machine</h6>
         <img class="washer_img" src="../images/washer2.png" alt="Mister Washer" aria-hidden="true">
         <p> &#x2605; 4.56 (25 ratings)</p>
-        <hr>
+        <hr style="width:50%;text-align:left;margin-left:0">
         <p>location: *put a map here* </p>
-        <hr>
+        <hr style="width:50%;text-align:left;margin-left:0">
         <p>price: $$</p>
-        <button type="button" class="confirm_order_button">Confirm Request</button>
-    </div>
-
-    <script>
-      function buttonClick() {
-        document.getElementById("hour_buttons").style.backgroundColor = "LightSkyBlue" ;
-      }
-      </script>
+        <button type="button" id="movebutton" class="confirm_order_button">Confirm Request</button>
+    
+      </div>
     
     <!-- import footer bar -->
-  <div include-html="includes/footer.html" class= "stay_in_bottom_pls"></div>
+  <!-- <div include-html="includes/footer.html" class= "stay_in_bottom_pls"></div> -->
   <script>
     includeHTML();
   </script>
