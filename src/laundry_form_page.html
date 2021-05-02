@@ -11,6 +11,7 @@
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <script src="../js/tml.js"></script>
+        <script src="../js/laundry_form_page.js"></script>
     </head>
 
     <body>
@@ -20,7 +21,7 @@
     <!-- WRITE YOUR PAGE HERE -->
     <div class= "confirm-side">
       <h2>Confirm Your Order</h2>
-      <p>Drop off time</p>
+      <p>Possible Drop Off Hours</p>
       <!-- <button type="button" class="time_buttons">14:00-15:00</button>
       <button type="button" class="time_buttons">15:00-16:00</button>
       <button type="button" class="time_buttons">17:00-18:00</button>
@@ -116,7 +117,19 @@
       <label for="Whites Only">
       <div class="wash_buttons">Whites Only</div>
       </label>
-      
+      <input type="checkbox" id="Delicates" value="Delicates" name="settings" />
+      <label for="Delicates">
+      <div class="wash_buttons">Delicates</div>
+      </label>
+      <input type="checkbox" id="Fast Wash" value="Fast Wash" name="settings" />
+      <label for="Fast Wash">
+      <div class="wash_buttons">Fast Wash</div>
+      </label>
+      <hr style="width:90%;text-align:left;margin-left:0">
+      <p>Leave a Message to Your Washer</p>
+      <textarea id="w3review" name="w3review" rows="4" cols="50">
+      </textarea>
+      <p>                               </p>
     </div>
     <div class="details-side">
         <h3>Order Details</h3>
@@ -125,10 +138,14 @@
         <p> <span class="pink-star">★</span> 4.7 (12 reviews)</p>
         <hr style="width:50%;text-align:left;margin-left:0">
         <p>location: Reahvia, Jerusalem </p>
+        <!--add location on map here-->
+        <!-- <img src="../images/mister washer location.jpeg" alt="Mister Washer Location" aria-hidden="true"> -->
         <hr style="width:50%;text-align:left;margin-left:0">
         <p>price: $$</p>
         <button id="moveButton" type="button" class="confirm_order_button">Confirm Request</button>
       </div>
+      <!-- special services-->
+      <!-- message to the washer-->
 
       <script type="text/javascript">
         document.getElementById("moveButton").onclick = function () {
