@@ -62,7 +62,7 @@
       </label>
 
       <hr style="width:90%;text-align:left;margin-left:0">
-      <p>How Many Loads</p>
+      <p>How Many Loads Do You Have?</p>
       <!-- <button type="button" class="load_buttons">1</button>
       <button type="button" class="load_buttons">2</button>
       <button type="button" class="load_buttons">3</button>
@@ -85,7 +85,7 @@
       </label>
 
       <hr style="width:90%;text-align:left;margin-left:0">
-      <p>Wash Settings</p>
+      <p>Wash Settings Preference</p>
       <!-- <button type="button" class="wash_buttons">Defualt</button>
       <button type="button" class="wash_buttons">30°C Wash</button>
       <button type="button" class="wash_buttons">40°C Wash</button>
@@ -121,14 +121,21 @@
     <div class="details-side">
         <h3>Order Details</h3>
         <p>Mister Washer Machine</p>
-        <img class="washer_img" src="../images/washer2.png" alt="Mister Washer" aria-hidden="true">
-        <p> &#x2605; 4.56 (12 reviews)</p>
+        <img class="washer_img" src="../images/washer3.png" alt="Mister Washer" aria-hidden="true">
+        <p> <span class="pink-star">★</span> 4.7 (12 reviews)</p>
         <hr style="width:50%;text-align:left;margin-left:0">
-        <p>location: *put a map here* </p>
+        <p>location: Reahvia, Jerusalem </p>
         <hr style="width:50%;text-align:left;margin-left:0">
         <p>price: $$</p>
         <button id="moveButton" type="button" class="confirm_order_button">Confirm Request</button>
       </div>
+
+      <script type="text/javascript">
+        document.getElementById("moveButton").onclick = function () {
+            location.href = "../src/thank_u_summary_page.html"
+        }
+    </script>
+    
     <!-- import footer bar -->
   <!-- <div include-html="includes/footer.html" class= "stay_in_bottom_pls"></div> -->
   <script>

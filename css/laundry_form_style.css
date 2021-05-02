@@ -29,7 +29,7 @@
     /* font-family: century gothic; */
     margin: 6px 4px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 25px;
     border: 2px solid rgba(182, 182, 182, 0.61);
     border-color: rgba(182, 182, 182, 0.61);
 
@@ -66,7 +66,7 @@ input:checked+label>time_buttons {
     /* font-family: century gothic; */
     margin: 6px 4px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 25px;
     border: 2px solid rgba(182, 182, 182, 0.61);
     border-color: rgba(182, 182, 182, 0.61);
 
@@ -103,7 +103,7 @@ input:checked+label>load_buttons {
     /* font-family: century gothic; */
     margin: 6px 4px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 25px;
     border: 2px solid rgba(182, 182, 182, 0.61);
     border-color: rgba(182, 182, 182, 0.61);
 
@@ -167,6 +167,12 @@ input:checked+label>wash_buttons {
     bottom: 0px;;
     /* width:100%; */
     /* height:60px; */
+}
+
+
+.pink-star {
+  color: pink;
+
 }
 
 /* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
