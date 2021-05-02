@@ -1,0 +1,24 @@
+{
+    "washer 1": {
+        "id": 1,
+        "name": "Mister Washer",
+        "img_src": "../images/washer3.png",
+        "location": "Jerusalem", 
+        "rating": 3,
+        "vertified": true,
+        "top_review": "”Better than my mom - Fold the laundry perfectly” (nadav, last week)",
+        "pics": ["../images/washer3.png", "../images/washer3.png", "../images/washer3.png", "../images/washer3.png"],
+        "properties" : {
+            "white": true,
+            "door_2_door" : true,
+            "ironing" : true,
+            "access" : true
+        }, 
+        "machine_type" : "bosch 9KG",
+        "description": "Hello! I’m Amitay, student at HUJI, worked from home so I’m available most of the time. New washing machine and dryer! and discount for soldiers!"
+    },
+    
+    "washer2": {
+
+    }
+}
