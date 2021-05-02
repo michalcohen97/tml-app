@@ -34,6 +34,10 @@
     color:  rgb(100, 100, 100);
 }
 
+.washer_block:hover {
+    background-color:rgba(182, 182, 182, 0.61);
+}
+
 .washer_img {
     /* TODO: manage images..... */
     /* height: 100%; */
