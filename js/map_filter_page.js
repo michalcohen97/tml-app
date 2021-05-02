@@ -29,7 +29,21 @@ washer3 = {
     lat: 31.773659957199842,
     lng: 35.20756250648687
 };
-const demo_washer_list = [washer1, washer2, washer3, washer2, washer3];
+washer4 = {
+    name: "Amitay Rachman",
+    vertified: true,
+    white: true,
+    location: "Jerusalem",
+    img_src: "../images/amitay pic.jpg",
+    img1_src: "../images/washer1.png",
+    location_str: "Reahvia, Jerusalem",
+    lat: 31.773610027001155,
+    lng: 35.215351837826255,
+    num_of_reviews: "12",
+    machine_type: "bosch 9KG",
+    description: "Hello! I’m Amitay, student at HUJI!",
+};
+const demo_washer_list = [washer1, washer2, washer4, washer3, washer2, washer3];
 current_location = {
     lat: 31.773610027001155,
     lng: 35.235351837826255
@@ -206,7 +220,7 @@ function filter_washers_by_self_service() {
 function filter_washers_by_distance_from_point(lat, lng) {
     middle_point = {
         lat: lat,
-        lng: lng
+        lng: lng,
     }
     // sort by distance comparison
     current_list_of_washers.sort((washer_a, washer_b) => {
