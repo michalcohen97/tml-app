@@ -1,6 +1,9 @@
 <html>
 
 <head>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
   <title>TML-The Money Laundry</title>
   <link rel="stylesheet" href="../css/washer_details_style.css">
 
@@ -20,55 +23,203 @@
   <title>W3.CSS</title>
   <title>Font Awesome 5 Icons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+
+
 <body>
   <!-- import header bar -->
-  <div include-html="includes/header.html" class="sticky_to_top"></div>
+  <div include-html="../src/includes/header.html" class="sticky_to_top"></div>
 
   <!-- Main Page Con -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-8">
+      <!-- left side of the Page -->
+      <div class="col-md-8">
+        <div class="container-fluid left_side">
 
-        <!-- upper header, filter buttons and more -->
-        <div class="container upper_detailes">
-          <!-- TODO: add pictures inside the header  -->
-          <div id="washer_details_header"></div>
-          <script>display_washer_header_details("washer_details_header", washer1)</script>
+          <!-- main information in top left_side -->
+          <div class="container-fluid headers_block">
+            <div class="row">
+              <div class="col-md-9">
+                  <div id="washer_name"></div>
+                  <script>get_washer_name("washer_name", washer1)</script>
+              </div>
+              <div class="col-md-3">
+                <div class="w3-padding w3-text-red">
+                  <div class="add_to_fav">
+                   <i class="fa fa-heart"></i> add to favorites
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                  <div id="washer_adress" class="washer_adress"></div>
+                  <script>get_washer_adress("washer_adress", washer1)</script>
+              </div>
+
+              <div class="col-md-3">
+                <div id="washer_rating" class="washer_rating"></div>
+                <script>get_washer_rating("washer_rating", washer1)</script>
+            </div>
+            </div>
+
+            <div class="row">
+              <div class="container-fluid washer_top_review_block">
+                <div id="washer_top_review"></div>
+                <script>get_washer_top_review("washer_top_review", washer1)</script>
+              </div>
+            </div>
+          </div>
+
+        <div class="row">
+          <div id="washer_images"></div>
+          <script>get_washer_images("washer_images", washer1)</script>
+        </div>
+
+
+        <div class="container description_block">
+          <div class="row">
+            <div class="col-md-1">
+                <div id="washer_proflie_img"></div>
+                <script>get_washer_profile_img("washer_proflie_img", washer1)</script>
+            </div>
+            <div class="col-md-11">
+                <div id="washer_description"></div>
+                <script>get_washer_description("washer_description", washer1)</script>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="container-fluid description_block">
+          <div class="row">
+            <div id="washer_description"></div>
+            <script>get_washer_description("washer_description", washer1)</script>
+          </div>
+        </div> -->
+
+
+        <div class="row">
+          <div id="washer_properties"></div>
+            <script>insert_washer_properties("washer_properties", washer1)</script>
+        </div>
+
+        <!-- <div class="row">
+          <div id="washer_reviews"></div>
+          <script>get_washer_reviewers("washer_reviews", washer1)</script>
+        </div> -->
+
+
+      </div>
+
+      </div>
+
+      
+
+      <div class="col-md-4">
+        <div class="container-fluid right_side">
+
+          <div class="row">
+            <section class="openinghours">
+              <div class="openinghourscontent section">
+                <div class="header">
+                  <h3>My laundry times</h3>
+                  <!-- <span id="open-status"><small class="openorclosed">We are</small></span> -->
+                  <div id="openorclosed"></div>
+                  <script>checkOpeningTimes("openorclosed", washer1)</script>
+                </div>
+                <table class="opening-hours-table" id = "opening-hours-table">
+                  <tr id="Sunday" itemprop="openingHours" title="Open Sunday at 11am to 4pm">
+                    <td>Sunday</td>
+                    <td class="opens">11:00 
+                      <!-- <div id="time"></div>
+                      <script>get_time("time", day = 0, open_or_close = 0)</script>  -->
+                    </td>
+                    <td>-</td>
+                    <td class="closes">16:00</td>
+                  </tr>
+                  <tr id="Monday" itemprop="openingHours" title="Open Monday at 9am to 6pm">
+                    <td>Monday</td>
+                    <td class="opens">09:00</td>
+                    <td>-</td>
+                    <td class="closes">18:00</td>
+                  </tr>
+                  <tr id="Tuesday" itemprop="openingHours" title="Open Tuesday at 9am to 6pm">
+                    <td>Tuesday</td>
+                    <td class="opens">09:00</td>
+                    <td>-</td>
+                    <td class="closes">18:00</td>
+                  </tr>
+                  <tr id="Wednesday" itemprop="openingHours" title="Open Wednesday at 9am to 6pm">
+                    <td>Wednesday</td>
+                    <td class="opens">09:00</td>
+                    <td>-</td>
+                    <td class="closes">18:00</td>
+                  </tr>
+                  <tr id="Thursday" itemprop="openingHours" title="Open Thursday at 9am to 8pm">
+                    <td>Thursday</td>
+                    <td class="opens">09:00</td>
+                    <td>-</td>
+                    <td class="closes">20:00</td>
+                  </tr>
+                  <tr id="Friday" itemprop="openingHours" title="Open Friday at 9am to 6pm">
+                    <td>Friday</td>
+                    <td class="opens">09:00</td>
+                    <td>-</td>
+                    <td class="closes">18:00</td>
+                  </tr>
+                  <tr id="Saturday" itemprop="openingHours" title="Open Saturday at 10am to 6pm">
+                    <td>Saturday</td>
+                    <td class="opens">10:00</td>
+                    <td>-</td>
+                    <td class="closes">18:00</td>
+                  </tr>
+                </table>
+                <script>color_today()</script>
+                    <script>
+                  (function(e, t, n, r) {
+                    if (e) return;
+                    t._appt = true;
+                    var i = n.createElement(r),
+                      s = n.getElementsByTagName(r)[0];
+                    i.async = true;
+                    i.src = '//dje0x8zlxc38k.cloudfront.net/loaders/s-min.js';
+                    s.parentNode.insertBefore(i, s)
+                  })(window._appt, window, document, "script")
+                </script>
+              </div>
+            </section>
+          </div>
+
+          <div class="row">
+            <div id="map">
+              <script 
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP2kPsOHfmf-XJMKhf-lBWeQdl5SqSRR8&callback=initMap&libraries=&v=weekly"async>
+                setPlace(washer1)              
+              </script>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div id="washer_commit"></div>
+            <script>get_washer_commitment("washer_commit", washer1)</script>
+          </div>
+
+
+
+
+          
         </div>
       </div>
 
-      <div id="washer_properties"></div>
-      <script>insert_washer_properties("washer_properties", washer1)</script>
-
-        
-        <!-- Washers by current filter -->
-        <!-- FIXME: Washer JS research -->
-      <div class="col-lg-4 filer_map_column">
-        <div class="sticky_to_top">
-          <div id="map"></div>
-        </div>
-      </div>
-      <!-- class wakka key: AIzaSyBP2kPsOHfmf-XJMKhf-lBWeQdl5SqSRR8 -->
-      <script 
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async>
-      </script>
-    </div>
-  </div>
 
 
 
-
-
-      <!-- import footer bar -->
-    <div include-html="includes/footer.html" class="sticky_to_bottom"></div>
-    <script>
-      includeHTML();
-    </script>
-    </body>
 
 </html>
