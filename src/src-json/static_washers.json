@@ -1,24 +1,31 @@
-{
-    "washer 1": {
-        "id": 1,
-        "name": "Mister Washer",
-        "img_src": "../images/washer3.png",
-        "location": "Jerusalem", 
-        "rating": 3,
-        "vertified": true,
-        "top_review": "”Better than my mom - Fold the laundry perfectly” (nadav, last week)",
-        "pics": ["../images/washer3.png", "../images/washer3.png", "../images/washer3.png", "../images/washer3.png"],
-        "properties" : {
-            "white": true,
-            "door_2_door" : true,
-            "ironing" : true,
-            "access" : true
-        }, 
-        "machine_type" : "bosch 9KG",
-        "description": "Hello! I’m Amitay, student at HUJI, worked from home so I’m available most of the time. New washing machine and dryer! and discount for soldiers!"
+washer1 = {
+    name: "Amitay Rachman",
+    rating: 3,
+    vertified: true,
+    top_review: "”Better than my mom - Fold the laundry perfectly” (nadav, last week)",
+    profile_pic: "../images/amitay pic.jpg",
+    img_src: "../images/washer1.png",
+    pics: ["../images/washer2.png", "../images/miele.png", "../images/softener.jpg", "../images/folding.jpg", "../images/washer3.png"],
+    location_str: "Reahvia, Jerusalem",
+    location_cor: [31.773610027001155, 35.215351837826255],
+    num_of_reviews: "12",
+    machine_type: "bosch 9KG",
+    description: "Hello! I’m Amitay, student at HUJI! worked from home so I’m available most of the time. New washing machine and dryer! and discount for soldiers!",
+    commit: "48 hours",
+    opening_times: {
+        Sunday: [11, 16],
+        Monday: [09, 18],
+        Tuesday: [10, 18],
+        Wednesday: [9, 18],
+        Thursday: [10, 20],
+        Friday: [09, 20],
+        Saturday: [10, 18]
     },
-    
-    "washer2": {
-
+    clients_who_review: ['client3', 'client5'],
+    properties: {
+        white: true,
+        door_2_door: true,
+        ironing: true,
+        access: true
     }
-}
+};
