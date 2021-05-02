@@ -138,7 +138,7 @@ function redirect_specific_washer(washer_id) {
     // const base_url = "wahser_details.html";
     // const final_url = base_url //+ JSON.stringify(current_washer);
     sessionStorage.setItem('current_wahser_id', washer_id);
-    location.href = "laundry_form_page.html";
+    location.href = "washer_details.html";
 }
 
 /*
