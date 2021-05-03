@@ -69,3 +69,7 @@
     width: 100%;
     background-color: rgb(43, 185, 185);
   }
+
+a {
+    color: inherit !important;
+}
