@@ -11,6 +11,7 @@
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <script src="../js/tml.js"></script>
+        <script src="../js/laundry_form_page.js"></script>
     </head>
 
     <body>
@@ -19,8 +20,8 @@
 
     <!-- WRITE YOUR PAGE HERE -->
     <div class= "confirm-side">
-      <h1>Confirm Your Order</h1>
-      <h6>Drop off time</h6>
+      <h2>Confirm Your Order</h2>
+      <p>Possible Drop Off Hours</p>
       <!-- <button type="button" class="time_buttons">14:00-15:00</button>
       <button type="button" class="time_buttons">15:00-16:00</button>
       <button type="button" class="time_buttons">17:00-18:00</button>
@@ -60,41 +61,100 @@
       <label for="21:00-22:00">
       <div class="time_buttons">21:00-22:00</div>
       </label>
-      <hr>
-      <h6>How Many Loads</h6>
-      <button type="button" class="load_buttons">1</button>
+
+      <hr style="width:90%;text-align:left;margin-left:0">
+      <p>How Many Loads Do You Have?</p>
+      <!-- <button type="button" class="load_buttons">1</button>
       <button type="button" class="load_buttons">2</button>
       <button type="button" class="load_buttons">3</button>
-      <button type="button" class="load_buttons">4</button>
-      <hr>
-      <h6>Wash Settings</h6>
-      <button type="button" class="wash_buttons">Defualt</button>
+      <button type="button" class="load_buttons">4</button> -->
+      <input type="checkbox" id="1" value="1" name="load" />
+      <label for="1">
+      <div class="load_buttons">1</div>
+      </label>
+      <input type="checkbox" id="2" value="2" name="load" />
+      <label for="2">
+      <div class="load_buttons">2</div>
+      </label>
+      <input type="checkbox" id="3" value="3" name="load" />
+      <label for="3">
+      <div class="load_buttons">3</div>
+      </label>
+      <input type="checkbox" id="4" value="4" name="load" />
+      <label for="4">
+      <div class="load_buttons">4</div>
+      </label>
+
+      <hr style="width:90%;text-align:left;margin-left:0">
+      <p>Wash Settings Preference</p>
+      <!-- <button type="button" class="wash_buttons">Defualt</button>
       <button type="button" class="wash_buttons">30°C Wash</button>
       <button type="button" class="wash_buttons">40°C Wash</button>
       <button type="button" class="wash_buttons">50°C Wash</button>
       <button type="button" class="wash_buttons">60°C Wash</button>
-      <button type="button" class="wash_buttons">Whites Only</button>
+      <button type="button" class="wash_buttons">Whites Only</button> -->
+      <input type="checkbox" id="Defualt" value="Defualt" name="settings" />
+      <label for="Defualt">
+      <div class="wash_buttons">Defualt</div>
+      </label>
+      <input type="checkbox" id="30°C Wash" value="30°C Wash" name="settings" />
+      <label for="30°C Wash">
+      <div class="wash_buttons">30°C Wash</div>
+      </label>
+      <input type="checkbox" id="40°C Wash" value="40°C Wash" name="settings" />
+      <label for="40°C Wash">
+      <div class="wash_buttons">40°C Wash</div>
+      </label>
+      <input type="checkbox" id="50°C Wash" value="50°C Wash" name="settings" />
+      <label for="50°C Wash">
+      <div class="wash_buttons">50°C Wash</div>
+      </label>
+      <input type="checkbox" id="60°C Wash" value="60°C Wash" name="settings" />
+      <label for="60°C Wash">
+      <div class="wash_buttons">60°C Wash</div>
+      </label>
+      <input type="checkbox" id="Whites Only" value="Whites Only" name="settings" />
+      <label for="Whites Only">
+      <div class="wash_buttons">Whites Only</div>
+      </label>
+      <input type="checkbox" id="Delicates" value="Delicates" name="settings" />
+      <label for="Delicates">
+      <div class="wash_buttons">Delicates</div>
+      </label>
+      <input type="checkbox" id="Fast Wash" value="Fast Wash" name="settings" />
+      <label for="Fast Wash">
+      <div class="wash_buttons">Fast Wash</div>
+      </label>
+      <hr style="width:90%;text-align:left;margin-left:0">
+      <p>Leave a Message to Your Washer</p>
+      <textarea id="w3review" name="w3review" rows="4" cols="50">
+      </textarea>
+      <p>                               </p>
     </div>
     <div class="details-side">
-        <h2>Order Details</h2>
-        <h6>Mister Washer Machine</h6>
-        <img class="washer_img" src="../images/washer2.png" alt="Mister Washer" aria-hidden="true">
-        <p> &#x2605; 4.56 (25 ratings)</p>
-        <hr>
-        <p>location: *put a map here* </p>
-        <hr>
+        <h3>Order Details</h3>
+        <p>Mister Washer Machine</p>
+        <img class="washer_img" src="../images/washer3.png" alt="Mister Washer" aria-hidden="true">
+        <p> <span class="pink-star">★</span> 4.7 (12 reviews)</p>
+        <hr style="width:50%;text-align:left;margin-left:0">
+        <p>location: Reahvia, Jerusalem </p>
+        <!--add location on map here-->
+        <!-- <img src="../images/mister washer location.jpeg" alt="Mister Washer Location" aria-hidden="true"> -->
+        <hr style="width:50%;text-align:left;margin-left:0">
         <p>price: $$</p>
-        <button type="button" class="confirm_order_button">Confirm Request</button>
-    </div>
+        <button id="moveButton" type="button" class="confirm_order_button">Confirm Request</button>
+      </div>
+      <!-- special services-->
+      <!-- message to the washer-->
 
-    <script>
-      function buttonClick() {
-        document.getElementById("hour_buttons").style.backgroundColor = "LightSkyBlue" ;
-      }
-      </script>
+      <script type="text/javascript">
+        document.getElementById("moveButton").onclick = function () {
+            location.href = "../src/thank_u_summary_page.html"
+        }
+    </script>
     
     <!-- import footer bar -->
-  <div include-html="includes/footer.html" class= "stay_in_bottom"></div>
+  <!-- <div include-html="includes/footer.html" class= "stay_in_bottom_pls"></div> -->
   <script>
     includeHTML();
   </script>
