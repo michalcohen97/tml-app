@@ -1,162 +1,164 @@
 <html>
-    <head>
-        <title>TML-The Money Laundry</title>
-        <link rel="stylesheet" href="../css/laundry_form_style.css">
 
-        <!--Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
-        <!-- bootstrap JS code (jsdelivr) -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- bootstrap icons & logos -->
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-        <script src="../js/tml.js"></script>
-        <script src="../js/laundry_form_page.js"></script>
-    </head>
+<head>
+  <title>TML-The Money Laundry</title>
+  <link rel="stylesheet" href="../css/laundry_form_style.css">
 
-    <body>
-    <!-- import header bar -->
-    <div include-html="includes/header.html"></div>
+  <!--Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+  <!-- bootstrap JS code (jsdelivr) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- bootstrap icons & logos -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+  <script src="../js/tml.js"></script>
+  <script src="../js/laundry_form_page.js"></script>
+</head>
 
-    <!-- WRITE YOUR PAGE HERE -->
-    <div class= "confirm-side">
-      <h2>Confirm Your Order</h2>
-      <p>Possible Drop Off Hours</p>
-      <!-- <button type="button" class="time_buttons">14:00-15:00</button>
+<body>
+  <!-- import header bar -->
+  <div include-html="includes/header.html"></div>
+
+  <!-- WRITE YOUR PAGE HERE -->
+  <div class="confirm-side">
+    <h2>Confirm Your Order</h2>
+    <p>Possible Drop Off Hours</p>
+    <!-- <button type="button" class="time_buttons">14:00-15:00</button>
       <button type="button" class="time_buttons">15:00-16:00</button>
       <button type="button" class="time_buttons">17:00-18:00</button>
       <button type="button" class="time_buttons">18:00-19:00</button>
       <button type="button" class="time_buttons">19:00-20:00</button>
       <button type="button" class="time_buttons">20:00-21:00</button>
       <button type="button" class="time_buttons">21:00-22:00</button> -->
-      <input type="checkbox" id="14:00-15:00" value="14:00-15:00" name="time" />
-      <label for="14:00-15:00">
+    <input type="checkbox" id="14:00-15:00" value="14:00-15:00" name="time" />
+    <label for="14:00-15:00">
       <div class="time_buttons">14:00-15:00</div>
-      </label>
-      <input type="checkbox" id="15:00-16:00" value="15:00-16:00" name="time" />
-      <label for="15:00-16:00">
+    </label>
+    <input type="checkbox" id="15:00-16:00" value="15:00-16:00" name="time" />
+    <label for="15:00-16:00">
       <div class="time_buttons">15:00-16:00</div>
-      </label>
-      <input type="checkbox" id="16:00-17:00" value="16:00-17:00" name="time" />
-      <label for="16:00-17:00">
+    </label>
+    <input type="checkbox" id="16:00-17:00" value="16:00-17:00" name="time" />
+    <label for="16:00-17:00">
       <div class="time_buttons">16:00-17:00</div>
-      </label>
-      <input type="checkbox" id="17:00-18:00" value="17:00-18:00" name="time" />
-      <label for="17:00-18:00">
+    </label>
+    <input type="checkbox" id="17:00-18:00" value="17:00-18:00" name="time" />
+    <label for="17:00-18:00">
       <div class="time_buttons">17:00-18:00</div>
-      </label>
-      <input type="checkbox" id="18:00-19:00" value="18:00-18:00" name="time" />
-      <label for="18:00-19:00">
+    </label>
+    <input type="checkbox" id="18:00-19:00" value="18:00-18:00" name="time" />
+    <label for="18:00-19:00">
       <div class="time_buttons">18:00-19:00</div>
-      </label>
-      <input type="checkbox" id="19:00-20:00" value="19:00-20:00" name="time" />
-      <label for="19:00-20:00">
+    </label>
+    <input type="checkbox" id="19:00-20:00" value="19:00-20:00" name="time" />
+    <label for="19:00-20:00">
       <div class="time_buttons">19:00-20:00</div>
-      </label>
-      <input type="checkbox" id="20:00-21:00" value="20:00-21:00" name="time" />
-      <label for="20:00-21:00">
+    </label>
+    <input type="checkbox" id="20:00-21:00" value="20:00-21:00" name="time" />
+    <label for="20:00-21:00">
       <div class="time_buttons">20:00-21:00</div>
-      </label>
-      <input type="checkbox" id="21:00-22:00" value="21:00-22:00" name="time" />
-      <label for="21:00-22:00">
+    </label>
+    <input type="checkbox" id="21:00-22:00" value="21:00-22:00" name="time" />
+    <label for="21:00-22:00">
       <div class="time_buttons">21:00-22:00</div>
-      </label>
+    </label>
 
-      <hr style="width:90%;text-align:left;margin-left:0">
-      <p>How Many Loads Do You Have?</p>
-      <!-- <button type="button" class="load_buttons">1</button>
+    <hr style="width:90%;text-align:left;margin-left:0">
+    <p>How Many Loads Do You Have?</p>
+    <!-- <button type="button" class="load_buttons">1</button>
       <button type="button" class="load_buttons">2</button>
       <button type="button" class="load_buttons">3</button>
       <button type="button" class="load_buttons">4</button> -->
-      <input type="checkbox" id="1" value="1" name="load" />
-      <label for="1">
+    <input type="checkbox" id="1" value="1" name="load" />
+    <label for="1">
       <div class="load_buttons">1</div>
-      </label>
-      <input type="checkbox" id="2" value="2" name="load" />
-      <label for="2">
+    </label>
+    <input type="checkbox" id="2" value="2" name="load" />
+    <label for="2">
       <div class="load_buttons">2</div>
-      </label>
-      <input type="checkbox" id="3" value="3" name="load" />
-      <label for="3">
+    </label>
+    <input type="checkbox" id="3" value="3" name="load" />
+    <label for="3">
       <div class="load_buttons">3</div>
-      </label>
-      <input type="checkbox" id="4" value="4" name="load" />
-      <label for="4">
+    </label>
+    <input type="checkbox" id="4" value="4" name="load" />
+    <label for="4">
       <div class="load_buttons">4</div>
-      </label>
+    </label>
 
-      <hr style="width:90%;text-align:left;margin-left:0">
-      <p>Wash Settings Preference</p>
-      <!-- <button type="button" class="wash_buttons">Defualt</button>
+    <hr style="width:90%;text-align:left;margin-left:0">
+    <p>Wash Settings Preference</p>
+    <!-- <button type="button" class="wash_buttons">Defualt</button>
       <button type="button" class="wash_buttons">30°C Wash</button>
       <button type="button" class="wash_buttons">40°C Wash</button>
       <button type="button" class="wash_buttons">50°C Wash</button>
       <button type="button" class="wash_buttons">60°C Wash</button>
       <button type="button" class="wash_buttons">Whites Only</button> -->
-      <input type="checkbox" id="Defualt" value="Defualt" name="settings" />
-      <label for="Defualt">
+    <input type="checkbox" id="Defualt" value="Defualt" name="settings" />
+    <label for="Defualt">
       <div class="wash_buttons">Defualt</div>
-      </label>
-      <input type="checkbox" id="30°C Wash" value="30°C Wash" name="settings" />
-      <label for="30°C Wash">
+    </label>
+    <input type="checkbox" id="30°C Wash" value="30°C Wash" name="settings" />
+    <label for="30°C Wash">
       <div class="wash_buttons">30°C Wash</div>
-      </label>
-      <input type="checkbox" id="40°C Wash" value="40°C Wash" name="settings" />
-      <label for="40°C Wash">
+    </label>
+    <input type="checkbox" id="40°C Wash" value="40°C Wash" name="settings" />
+    <label for="40°C Wash">
       <div class="wash_buttons">40°C Wash</div>
-      </label>
-      <input type="checkbox" id="50°C Wash" value="50°C Wash" name="settings" />
-      <label for="50°C Wash">
+    </label>
+    <input type="checkbox" id="50°C Wash" value="50°C Wash" name="settings" />
+    <label for="50°C Wash">
       <div class="wash_buttons">50°C Wash</div>
-      </label>
-      <input type="checkbox" id="60°C Wash" value="60°C Wash" name="settings" />
-      <label for="60°C Wash">
+    </label>
+    <input type="checkbox" id="60°C Wash" value="60°C Wash" name="settings" />
+    <label for="60°C Wash">
       <div class="wash_buttons">60°C Wash</div>
-      </label>
-      <input type="checkbox" id="Whites Only" value="Whites Only" name="settings" />
-      <label for="Whites Only">
+    </label>
+    <input type="checkbox" id="Whites Only" value="Whites Only" name="settings" />
+    <label for="Whites Only">
       <div class="wash_buttons">Whites Only</div>
-      </label>
-      <input type="checkbox" id="Delicates" value="Delicates" name="settings" />
-      <label for="Delicates">
+    </label>
+    <input type="checkbox" id="Delicates" value="Delicates" name="settings" />
+    <label for="Delicates">
       <div class="wash_buttons">Delicates</div>
-      </label>
-      <input type="checkbox" id="Fast Wash" value="Fast Wash" name="settings" />
-      <label for="Fast Wash">
+    </label>
+    <input type="checkbox" id="Fast Wash" value="Fast Wash" name="settings" />
+    <label for="Fast Wash">
       <div class="wash_buttons">Fast Wash</div>
-      </label>
-      <hr style="width:90%;text-align:left;margin-left:0">
-      <p>Leave a Message to Your Washer</p>
-      <textarea id="w3review" name="w3review" rows="4" cols="50">
+    </label>
+    <hr style="width:90%;text-align:left;margin-left:0">
+    <p>Leave a Message to Your Washer</p>
+    <textarea id="w3review" name="w3review" rows="4" cols="50">
       </textarea>
-      <p>                               </p>
-    </div>
-    <div class="details-side">
-        <h3>Order Details</h3>
-        <p>Mister Washer Machine</p>
-        <img class="washer_img" src="../images/washer3.png" alt="Mister Washer" aria-hidden="true">
-        <p> <span class="pink-star">★</span> 4.7 (12 reviews)</p>
-        <hr style="width:50%;text-align:left;margin-left:0">
-        <p>location: Reahvia, Jerusalem </p>
-        <!--add location on map here-->
-        <!-- <img src="../images/mister washer location.jpeg" alt="Mister Washer Location" aria-hidden="true"> -->
-        <hr style="width:50%;text-align:left;margin-left:0">
-        <p>price: $$</p>
-        <button id="moveButton" type="button" class="confirm_order_button">Confirm Request</button>
-      </div>
-      <!-- special services-->
-      <!-- message to the washer-->
+    <p> </p>
+  </div>
+  <div class="details-side">
+    <h3>Order Details</h3>
+    <p>Amitay Rachman</p>
+    <img class="washer_img" src="../images/washer3.png" alt="Amitay Rachman" aria-hidden="true">
+    <p> <span class="pink-star">★</span> 4.7 (12 reviews)</p>
+    <hr style="width:50%;text-align:left;margin-left:0">
+    <p>location: Reahvia, Jerusalem </p>
+    <!--add location on map here-->
+    <!-- <img src="../images/mister washer location.jpeg" alt="Mister Washer Location" aria-hidden="true"> -->
+    <hr style="width:50%;text-align:left;margin-left:0">
+    <p>price: $$</p>
+    <button id="moveButton" type="button" class="confirm_order_button">Confirm Request</button>
+  </div>
+  <!-- special services-->
+  <!-- message to the washer-->
 
-      <script type="text/javascript">
-        document.getElementById("moveButton").onclick = function () {
-            location.href = "../src/thank_u_summary_page.html"
-        }
-    </script>
-    
-    <!-- import footer bar -->
+  <script type="text/javascript">
+    document.getElementById("moveButton").onclick = function () {
+      location.href = "../src/thank_u_summary_page.html"
+    }
+  </script>
+
+  <!-- import footer bar -->
   <!-- <div include-html="includes/footer.html" class= "stay_in_bottom_pls"></div> -->
   <script>
     includeHTML();
   </script>
-  </body>
+</body>
+
 </html>
