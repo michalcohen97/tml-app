@@ -40,7 +40,7 @@
   <!-- ======= Search Bar ======= -->
   <div class="inner-form">
     <div class="input-field first-wrap">
-      <input id="search" type="text" placeholder="Washer Name" />
+      <input type="text" placeholder="Washer Name" />
     </div>
     <div class="input-field first-wrap">
       <div class="icon-wrap">
@@ -49,7 +49,7 @@
           <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
         </svg>
       </div>
-      <input id="search" type="text" placeholder="Location" />
+      <input type="text" placeholder="Location" />
     </div>
     <div class="input-field second-wrap">
       <div class="icon-wrap">
@@ -66,50 +66,26 @@
     </div>
   </div>
 
-  <!-- ======= Title Section ======= -->
-  <!-- <section id="hero" class="d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div
-          class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1"
-          data-aos="fade-up">
-          <div>
-            <h1>App landing page template</h1>
-            <h2>Lorem ipsum dolor sit amet, tota senserit percipitur ius ut, usu et fastidii forensibus voluptatibus.
-              His ei nihil feugait</h2>
-            <a href="#" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>
-            <a href="#" class="download-btn"><i class="bx bxl-apple"></i> App Store</a>
-          </div>
-        </div>
-        <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img"
-          data-aos="fade-up">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- End Hero -->
-
   <table>
-        <tr>
-          <td class="main-title-text">
-            <h1>From now on,<br/> feel free to wash your<br/> dirty laundry outside</h1>
-            <h4>The social laundry services are now in town!<br/> Try one of the best washers from your immediate area, <br/>who are ready to give your clothes perfect care!</h2>
-          </td>
-          <td class="main-title-svg">
-            <object data="../images/welcome-graphic.svg" class="main-title-graphic"> </object>
-          </td>
-        </tr>
-        <tr class="join-as-washer">
-          <td class="join-as-washer-text">
-            <h2>Become a Washer</h2>
-            <a class="join-as-washer-btn" href="washer_profile_page.html">Join as a washer</a>
-          </td>
-          <td class="join-as-washer-svg">
-            <object data="../images/welcome-graphic.svg" class="main-title-graphic"> </object>
-          </td>
-        </tr>
-      </table>
+      <tr>
+        <td class="main-title-text">
+          <h1>From now on,<br/> feel free to wash your<br/> dirty laundry outside</h1>
+          <h4>The social laundry services are now in town!<br/> Try one of the best washers from your immediate area, <br/>who are ready to give your clothes perfect care!</h2>
+        </td>
+        <td class="main-title-svg">
+          <object data="../images/welcome-graphic.svg" class="main-title-graphic"> </object>
+        </td>
+      </tr>
+      <tr class="join-as-washer">
+        <td class="join-as-washer-text">
+          <h2>Become a Washer</h2>
+          <a class="join-as-washer-btn" href="washer_profile_page.html">Join as a washer</a>
+        </td>
+        <td class="join-as-washer-svg">
+          <object data="../images/welcome-graphic1.svg" class="main-title-graphic"> </object>
+        </td>
+      </tr>
+    </table>
 
   <!-- import footer bar -->
   <div include-html="includes/footer.html" class="stay_in_bottom"></div>
@@ -117,13 +93,8 @@
   <script src="../js/welcome_page/flatpickr.js"></script>
   <script>
     includeHTML();
-  </script>
-  <script>
-    flatpickr(".datepicker",
-      {});
+    flatpickr(".datepicker",{});
 
-  </script>
-  <script>
     const choices = new Choices('[data-trigger]',
       {
         searchEnabled: false,
