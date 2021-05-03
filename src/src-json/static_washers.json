@@ -1,4 +1,4 @@
-washer1 = {
+washer4 = {
     name: "Amitay Rachman",
     rating: 3,
     vertified: true,
@@ -26,6 +26,6 @@ washer1 = {
         white: true,
         door_2_door: true,
         ironing: true,
-        access: true
+        access: true,
     }
-};
+}

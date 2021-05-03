@@ -72,8 +72,8 @@ function insert_header_and_buttons_block() {
     header_block_raw_html += '</div>'
     header_block_raw_html += '<p><a href="" onclick="refresh_filters();">Clear Filters</a></p>'
     //TODO: add href to current covid restrictions -->
-    header_block_raw_html += '<p>Review COVID-19 restrictions before you wash. <a'
-    header_block_raw_html += 'href="https://www.gov.il/he/departments/guides/ramzor-cites-guidelines">Learn more</a></p>'
+    header_block_raw_html += '<p>Review COVID-19 restrictions before you wash. '
+    header_block_raw_html += '<a href="https://www.gov.il/he/departments/guides/ramzor-cites-guidelines">Learn more</a></p>'
     header_block_raw_html += '</div>'
 
     document.getElementById("upper_header_and_buttons_block").innerHTML = header_block_raw_html;
