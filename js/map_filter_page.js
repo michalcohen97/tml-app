@@ -19,7 +19,31 @@ washer2 = {
     lat: 31.775659957199842,
     lng: 35.21756250648687
 };
-const demo_washer_list = [washer1, washer2, washer1, washer2];
+washer3 = {
+    id: 2,
+    name: "Washer3Ever",
+    white: true,
+    img_src: "../images/washer1.png",
+    location: "Jerusalem",
+    description: "Here to make some noise! lets wash some s***!!",
+    lat: 31.773659957199842,
+    lng: 35.20756250648687
+};
+washer4 = {
+    name: "Amitay Rachman",
+    vertified: true,
+    white: true,
+    location: "Jerusalem",
+    img_src: "../images/amitay pic.jpg",
+    img1_src: "../images/washer1.png",
+    location_str: "Reahvia, Jerusalem",
+    lat: 31.773610027001155,
+    lng: 35.215351837826255,
+    num_of_reviews: "12",
+    machine_type: "bosch 9KG",
+    description: "Hello! I’m Amitay, student at HUJI!",
+};
+const demo_washer_list = [washer1, washer2, washer4, washer3, washer2, washer3];
 current_location = {
     lat: 31.773610027001155,
     lng: 35.235351837826255
@@ -36,20 +60,20 @@ function insert_header_and_buttons_block() {
     header_block_raw_html += '<div class="container upper_header_filters_buttons">'
     //TODO: add the real number of options, for the real dates
     header_block_raw_html += '<div>300+ washers $ Apr 29 - May 19 (3 days)</div>'
-    header_block_raw_html += '<h1>Washers in selected map area</h1>'
+    header_block_raw_html += '<h2>Washers in selected map area</h2>'
     header_block_raw_html += '<div id="upper_filter_buttons_area">'
     //TODO: make the buttons do something
-    header_block_raw_html += '<button type="button" class="upper_filter_buttons" OnClick="filter_washers_by_self_service()">Self service</button>'
+    header_block_raw_html += '<button type="button" class="upper_filter_buttons" OnClick="filter_washers_by_self_service()">Full service</button>'
     header_block_raw_html += '<button type="button" class="upper_filter_buttons">White laundry only</button>'
     header_block_raw_html += '<button type="button" class="upper_filter_buttons"'
     header_block_raw_html += 'OnClick="filter_washers_by_distance_from_point(current_user_location.lat, current_user_location.lng);">Near'
-    header_block_raw_html += 'me</button>'
+    header_block_raw_html += ' me</button>'
     header_block_raw_html += '<button type="button" class="upper_filter_buttons">More filters</button>'
     header_block_raw_html += '</div>'
     header_block_raw_html += '<p><a href="" onclick="refresh_filters();">Clear Filters</a></p>'
     //TODO: add href to current covid restrictions -->
-    header_block_raw_html += '<p>Review COVID-19 restrictions before you wash. <a'
-    header_block_raw_html += 'href="https://www.gov.il/he/departments/guides/ramzor-cites-guidelines">Learn more</a></p>'
+    header_block_raw_html += '<p>Review COVID-19 restrictions before you wash. '
+    header_block_raw_html += '<a href="https://www.gov.il/he/departments/guides/ramzor-cites-guidelines">Learn more</a></p>'
     header_block_raw_html += '</div>'
 
     document.getElementById("upper_header_and_buttons_block").innerHTML = header_block_raw_html;
@@ -67,26 +91,23 @@ function create_washer_list_by_filter(washer_filter = () => true) {
     currently - use all of the washers (query from server?) and take a filter function, than create each of the washers in block and display them.
     FIXME: hard to order-by by location\rating, maybe will take a lot of time to load but DB
 */
-function insert_washer_blocks(filter = () => true) {
+function insert_washer_blocks() {
     let whole_washers_html_block = '';
     // adjusting page height
     const max_number_of_blocks = Math.min(MAX_NUMBER_OF_BLOCKS, current_list_of_washers.length);
 
-    for (let i = 0; i < max_number_of_blocks; i++) {
-        let washer_block_raw_html = create_one_washer_block(current_list_of_washers[i]);
-        whole_washers_html_block += washer_block_raw_html;
+    if (max_number_of_blocks > 0) {
+        for (let i = 0; i < max_number_of_blocks; i++) {
+            let washer_block_raw_html = create_one_washer_block(current_list_of_washers[i]);
+            whole_washers_html_block += washer_block_raw_html;
+            }
+        }
+    else {
+        whole_washers_html_block += '<p>No washers found for the current filter.</br> Press "Clear Filter" to see more options.';
     }
 
     document.getElementById("washers_list_of_blocks").innerHTML = whole_washers_html_block;
 
-    // const xmlhttp = new XMLHttpRequest();
-    // xmlhttp.onreadystatechange = () => {
-    //     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-    //         document.getElementById("washers_list_of_blocks").innerHTML = whole_washers_html_block;
-    //     }
-    // }
-    // xmlhttp.open("GET", "???", true);
-    // xmlhttp.send();
 }
 
 /*
@@ -111,7 +132,7 @@ function create_one_washer_block(washer) {
     } else {
         washer_block_raw_html += '<p>Colored in ' + washer.location + '</p>';
     }
-    washer_block_raw_html += '<h2>' + washer.name + '</h2>';
+    washer_block_raw_html += '<h3>' + washer.name + '</h3>';
     washer_block_raw_html += '<p>' + washer.description + '</p>';
     washer_block_raw_html += '</div></div></div></div>';
     return washer_block_raw_html;
@@ -126,13 +147,12 @@ function redirect_specific_washer(washer_id) {
     //     if (washer_id == current_user_location[i].id) {
     //         current_washer = current_user_location[i];
     //     }
-    // } 
+    // }
     // let url_params = new URLSearchParams();
     // const base_url = "wahser_details.html";
     // const final_url = base_url //+ JSON.stringify(current_washer);
     sessionStorage.setItem('current_wahser_id', washer_id);
-    location.href = "../src/wahser_details.html";
-    // window.open(final_url);
+    location.href = "washer_details.html";
 }
 
 /*
@@ -187,7 +207,8 @@ function filter_washers_by_self_service() {
     }
 
     // insert new blocks and markers
-    insert_washer_blocks(is_washer_self_service);
+    current_list_of_washers = create_washer_list_by_filter(is_washer_self_service);
+    insert_washer_blocks();
     initMap(is_washer_self_service);
 }
 
@@ -199,7 +220,7 @@ function filter_washers_by_self_service() {
 function filter_washers_by_distance_from_point(lat, lng) {
     middle_point = {
         lat: lat,
-        lng: lng
+        lng: lng,
     }
     // sort by distance comparison
     current_list_of_washers.sort((washer_a, washer_b) => {
